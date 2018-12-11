@@ -28,7 +28,9 @@ class Top20Box extends Component{
   render(){
     console.log("rendering top 20 box container");
     return(
+      <div className="top-box">
       <SongList songs = {this.state.songs}/>
+      </div>
       // <p>the top 20 will go here</p>
     )
   }

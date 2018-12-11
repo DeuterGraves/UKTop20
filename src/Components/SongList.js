@@ -13,7 +13,7 @@ const SongList = ({songs}) => {
   });
 
   return(
-    <div>
+    <div className="song-list">
     { songNodes }
     </div>
   )
