@@ -1,7 +1,8 @@
 .top-box {
-  width: 350px;
+  width: 500px;
   margin: 10px auto;
-  border: 1px solid black;
+  border: 3px solid #211D30;
+  border-radius: 6px;
   padding: 10px;
-  background-color: #f1f1f1;
+  background-color: #D5D5EA;
 }

@@ -9,7 +9,11 @@ const SongList = ({songs}) => {
     key = {song.id.attributes["im:id"]}
     position = {index+1}
     title = {song["im:name"].label}
-    artist = {song["im:artist"].label} />
+    artist = {song["im:artist"].label}
+    image = {song["im:image"][1].label}
+    imageHeight = {song["im:image"][1].attributes.height}
+    // previewLink = {song.link[1].attributes.href} 
+    />
   });
 
   return(
