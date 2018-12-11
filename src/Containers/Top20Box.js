@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import SongList from '../Components/SongList.js'
+import './Top20Box.css'
 
 class Top20Box extends Component{
   constructor(props){

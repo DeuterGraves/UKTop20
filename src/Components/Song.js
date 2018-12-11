@@ -1,10 +1,11 @@
-import React, {Fragment} from 'react';
+import React from 'react';
+import './Song.css'
 
 const Song = ({ position, title, artist}) =>{
   return(
-    <Fragment>
-    <p>{position} {title} by {artist} </p>
-    </Fragment>
+    <li className="song-item">
+    {position}. {title} by {artist}
+    </li>
   )
 }
 

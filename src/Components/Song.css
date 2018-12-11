@@ -1,0 +1,7 @@
+.song-item{
+  /* border: 1px solid black; */
+  padding: 8px;
+  font-size: 18px;
+  list-style-type: none;
+  text-align: left;
+}
