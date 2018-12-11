@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import SongList from '../Components/SongList.js'
 
 class Top20Box extends Component{
   constructor(props){
@@ -9,6 +10,7 @@ class Top20Box extends Component{
   }
 
   componentDidMount(){
+    console.log("Mounted!!! STUFF!!");
     const url = "https://itunes.apple.com/gb/rss/topsongs/limit=20/json";
     const request = new XMLHttpRequest();
     request.open("GET", url);
@@ -17,7 +19,7 @@ class Top20Box extends Component{
       if (request.status !== 200) return(<p>the top 20 will go here</p>);
       const jsonString = request.responseText;
       const data = JSON.parse(jsonString);
-      this.setState({songs: data})
+      this.setState({songs: data.feed.entry})
     });
     request.send();
   }
@@ -25,7 +27,8 @@ class Top20Box extends Component{
   render(){
     console.log("rendering top 20 box container");
     return(
-      <p>the top 20 will go here</p>
+      <SongList songs = {this.state.songs}/>
+      // <p>the top 20 will go here</p>
     )
   }
 
